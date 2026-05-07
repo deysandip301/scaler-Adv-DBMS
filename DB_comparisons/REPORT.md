@@ -35,9 +35,3 @@ Data volume:
 - SQLite gave the fastest Q3 result because the lookup was highly selective.
 - DuckDB’s query execution was efficient, but the short CLI-run queries were slower end to end than PostgreSQL here.
 - SQLite’s `mmap_size` change was easy to apply, but the observed Q1 time still stayed above PostgreSQL.
-
-## Takeaway
-
-- Use PostgreSQL for services and transactional systems.
-- Use SQLite for local embedded storage.
-- Use DuckDB for analytics without running a separate server.
